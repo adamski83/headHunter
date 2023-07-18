@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Container } from '@mui/material';
+import User from './User';
 
 const CreateUserData = () => {
 	const [education, setEducation] = useState('');
@@ -9,38 +11,45 @@ const CreateUserData = () => {
 	const [salary, setSalry] = useState(0);
 
 	return (
-		<div>
-			<form>
-				<input type='text' placeholder='edukacja' />
-				<input type='text' placeholder='kursy' />
-				<input type='text' placeholder='doświadczenie' />
-				<select
-					value={contractType}
-					onChange={(e) => setContractType(e.target.value)}>
-					<option value='B2B'>B2B</option>
-					<option value='UOW'>Umowa o Pracę</option>
-					<option value='Staż'>Staż</option>
-				</select>
-				<select
-					value={experienceTime}
-					onChange={(e) => setExperienceTime(e.target.value)}>
-					<option value={0}>Brak doświadczenia komercyjnego</option>
-					<option value={1}>1 rok doświadczenia</option>
-					<option value={3}>3 lata doświadczenia</option>
-					<option value={5}>5 lata doświadczenia</option>
-					<option value={10}>ponad 10 lat doświadczenia</option>
-				</select>
-				<select
-					value={salary}
-					onChange={(e) => setSalry(e.target.value)}>
-					<option value={0}>Brak doświadczenia komercyjnego</option>
-					<option value={1}>1 rok doświadczenia</option>
-					<option value={3}>3 lata doświadczenia</option>
-					<option value={5}>5 lata doświadczenia</option>
-					<option value={10}>ponad 10 lat doświadczenia</option>
-				</select>
-			</form>
-		</div>
+		<Container>
+			<User />
+			<div>
+				<form>
+					<input type='text' placeholder='edukacja' />
+					<input type='text' placeholder='kursy' />
+					<input type='text' placeholder='doświadczenie' />
+					<select
+						value={contractType}
+						onChange={(e) => setContractType(e.target.value)}>
+						<option value='B2B'>B2B</option>
+						<option value='UOW'>Umowa o Pracę</option>
+						<option value='Staż'>Staż</option>
+					</select>
+					<select
+						value={experienceTime}
+						onChange={(e) => setExperienceTime(e.target.value)}>
+						<option value={0}>
+							Brak doświadczenia komercyjnego
+						</option>
+						<option value={1}>1 rok doświadczenia</option>
+						<option value={3}>3 lata doświadczenia</option>
+						<option value={5}>5 lata doświadczenia</option>
+						<option value={10}>ponad 10 lat doświadczenia</option>
+					</select>
+					<select
+						value={salary}
+						onChange={(e) => setSalry(e.target.value)}>
+						<option value={0}>
+							Brak doświadczenia komercyjnego
+						</option>
+						<option value={1}>1 rok doświadczenia</option>
+						<option value={3}>3 lata doświadczenia</option>
+						<option value={5}>5 lata doświadczenia</option>
+						<option value={10}>ponad 10 lat doświadczenia</option>
+					</select>
+				</form>
+			</div>
+		</Container>
 	);
 };
 
