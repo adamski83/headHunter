@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@800&family=Lato:wght@400;700&family=Roboto:ital,wght@0,300;0,900;1,400&display=swap');
+
+.login__input {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+input[type='text'] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	background-color: #201f1ffd;
+	color: rgb(204, 199, 199);
+	font-family: 'Lato', sans-serif;
+	font-size: 1.2rem;
+}
+input[type='text']:focus {
+	background-color: rgb(219, 235, 229);
+	color: black;
+}
+.btn {
+	background-color: crimson;
+	width: 100px;
+	height: 50px;
+	color: azure;
+	font-weight: bold;
+	outline: none;
+	border-radius: 2px;
+}
+form {
+	display: flex;
+	flex-direction: column;
+}
+form p {
+	display: flex;
+	justify-content: end;
+	margin: 15px 0;
+}
+img {
+	opacity: 0.7;
+	width: 150px;
+	height: 150px;
+	border-radius: 50px;
+	margin-bottom: 10px;
+	filter: grayscale(100%);
+}
