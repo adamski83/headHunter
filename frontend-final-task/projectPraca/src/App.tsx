@@ -9,7 +9,7 @@ function App() {
 		<div>
 			<Routes>
 				<Route path='login' element={<CreateUser />} />
-				<Route path='createUser' element={<CreateUserData />} />
+				<Route path='userCv' element={<CreateUserData />} />
 			</Routes>
 		</div>
 	);

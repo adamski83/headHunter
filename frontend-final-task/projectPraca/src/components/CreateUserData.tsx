@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container } from '@mui/material';
 import User from './User';
+import Header from './Header';
 
 const CreateUserData = () => {
 	const [education, setEducation] = useState('');
@@ -12,8 +13,9 @@ const CreateUserData = () => {
 
 	return (
 		<Container>
+			<Header />
 			<User />
-			<div>
+			{/* <div>
 				<form>
 					<input type='text' placeholder='edukacja' />
 					<input type='text' placeholder='kursy' />
@@ -48,7 +50,7 @@ const CreateUserData = () => {
 						<option value={10}>ponad 10 lat doświadczenia</option>
 					</select>
 				</form>
-			</div>
+			</div> */}
 		</Container>
 	);
 };
