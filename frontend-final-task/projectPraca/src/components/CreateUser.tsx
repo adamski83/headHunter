@@ -10,7 +10,7 @@ import {
 import Logo from '../assets/LogoMegaK.png';
 import { useNavigate } from 'react-router-dom';
 
-const CreateUser = () => {
+export const Login = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const navigate = useNavigate();
@@ -60,5 +60,3 @@ const CreateUser = () => {
 		</div>
 	);
 };
-
-export default CreateUser;
