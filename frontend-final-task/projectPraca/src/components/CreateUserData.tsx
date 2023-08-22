@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
-import { Container } from '@mui/material';
+// import { Container } from '@mui/material';
+// import Container from './styled/Container.jsx';
 import User from './User';
 import Header from './Header';
+import styled from 'styled-components';
+
+const Container = styled.div`
+	display: flex;
+	flex-direction: row;
+`;
 
 const CreateUserData = () => {
 	const [education, setEducation] = useState('');

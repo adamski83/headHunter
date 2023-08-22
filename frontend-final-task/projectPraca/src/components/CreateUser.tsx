@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
-import Logo from '../assets/logo.avif';
-import CreateUserStyle from './CreateUser.module.css';
+import {
+	Image,
+	SignInForm,
+	StyledInput,
+	Text,
+	Link,
+	Button,
+} from './styled/Login.styled.js';
+import Logo from '../assets/LogoMegaK.png';
 import { useNavigate } from 'react-router-dom';
 
 const CreateUser = () => {
@@ -10,46 +17,46 @@ const CreateUser = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		console.log(email);
+
 		setEmail('');
 		setPassword('');
-		// if something, then
-		// navigate('/createUser');
 	};
 
 	return (
 		<div>
-			<div>
-				<img src={Logo} alt='logo' />
-			</div>
-			<form onSubmit={handleSubmit}>
-				<section className={CreateUserStyle.login__input}>
-					<input
-						type='text'
-						placeholder='E-mail'
-						value={email}
-						onChange={(e) => setEmail(e.target.value)}
-					/>
-					<input
-						type='text'
-						placeholder='Hasło'
-						value={password}
-						onChange={(e) => setPassword(e.target.value)}
-					/>
-				</section>
-				<p>Zapomniałeś Hasła ?</p>
-				<section
+			<SignInForm onSubmit={handleSubmit}>
+				<Image src={Logo} alt='logo' />
+				<StyledInput
+					autoComplete='true'
+					placeholder='Email'
+					type='text'
+					value={email}
+					onChange={(e) => setEmail(e.target.value)}
+				/>
+				<StyledInput
+					autoComplete='true'
+					type='password'
+					placeholder='Hasło'
+					value={password}
+					onChange={(e) => setPassword(e.target.value)}
+				/>{' '}
+				<div style={{ width: '100%' }}>
+					<Text>Zapomniałeś hasła ?</Text>
+				</div>
+				<div
 					style={{
+						width: '100%',
 						display: 'flex',
-						justifyContent: 'space-around',
+						justifyContent: 'space-between',
+						marginTop: '22px',
 					}}>
-					<p>
-						Nie masz konta? <a href='#'>Zarejestruj się</a>
-					</p>
-					<button type='submit' className={CreateUserStyle.btn}>
-						Zaloguj się
-					</button>
-				</section>
-			</form>
+					<Text>
+						Nie masz konta? <Link href='#'>Zarejestruj się</Link>
+					</Text>
+					<Button>Zaloguj się</Button>
+				</div>
+			</SignInForm>
 		</div>
 	);
 };
