@@ -15,9 +15,8 @@ export const Login = () => {
 	const [password, setPassword] = useState('');
 	const navigate = useNavigate();
 
-	const handleSubmit = (e) => {
+	const handleSubmit = (e: React.FormEvent<HTMLInputElement>) => {
 		e.preventDefault();
-		console.log(email);
 
 		setEmail('');
 		setPassword('');
@@ -32,21 +31,25 @@ export const Login = () => {
 					placeholder='Email'
 					type='text'
 					value={email}
-					onChange={(e) => setEmail(e.target.value)}
+					onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+						setEmail(e.target.value)
+					}
 				/>
 				<StyledInput
 					autoComplete='true'
 					type='password'
 					placeholder='Hasło'
 					value={password}
-					onChange={(e) => setPassword(e.target.value)}
+					onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+						setPassword(e.target.value)
+					}
 				/>{' '}
-				<div style={{ width: '100%' }}>
+				<div style={{ width: '350px' }}>
 					<Text>Zapomniałeś hasła ?</Text>
 				</div>
 				<div
 					style={{
-						width: '100%',
+						width: '350px',
 						display: 'flex',
 						justifyContent: 'space-between',
 						marginTop: '22px',

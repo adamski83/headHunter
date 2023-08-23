@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const SignInForm = styled.form`
 	display: flex;
+	min-height: 100vh;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;

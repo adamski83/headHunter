@@ -1,8 +1,16 @@
 import React from 'react';
-import Logo from '../../src/assets/logo.avif';
+import { StyledHeader, Wrapper } from './styled/Header.styled.js';
+import { UserMenu } from './UserMenu';
+import { Image } from './styled/Login.styled.js';
+import Logo from '../assets/LogoMegaK.png';
 
-const Header = () => {
-	return <div></div>;
+export const Header = () => {
+	return (
+		<Wrapper>
+			<StyledHeader>
+				<Image src={Logo} />
+				<UserMenu />
+			</StyledHeader>
+		</Wrapper>
+	);
 };
-
-export default Header;
