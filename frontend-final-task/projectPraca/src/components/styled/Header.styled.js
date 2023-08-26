@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-	max-width: 1920px;
+	width: 100vw;
 	max-height: 1340px;
 	margin: 0 auto;
 	display: flex;
+	background-color: #1e1e1f;
 	justify-content: space-around;
 `;
 
@@ -12,22 +13,44 @@ export const StyledHeader = styled.header`
 	width: 1430px;
 	display: flex;
 	justify-content: space-around;
-	/* align-items: center; */
 `;
 
-export const StyledMenu = styled.form`
+export const DropDownProfile = styled.div`
+	display: flex;
+	align-items: flex-end;
+	justify-content: end;
 	width: 260px;
-	height: 80px;
+	gap: 12px;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
 
-	select {
-		margin-bottom: 10px;
-		margin-top: 10px;
-		font-family: cursive, sans-serif;
-		outline: 0;
-		background: #1e1e1f;
+	button {
+		background-color: inherit;
 		color: #f7f7f7;
 		border: 0;
-		padding: 4px;
-		border-radius: 9px;
+		cursor: pointer;
+	}
+
+	.content {
+		opacity: 0;
+		display: flex;
+		flex-direction: column;
+		color: #f7f7f7;
+		text-decoration: none;
+
+		&:hover {
+			opacity: 1;
+		}
+		a {
+			display: flex;
+			flex-direction: column;
+			color: #f7f7f7;
+			text-decoration: none;
+
+			&:hover {
+				color: #a1a1a1;
+			}
+		}
 	}
 `;
