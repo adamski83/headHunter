@@ -39,10 +39,10 @@ export const Link = styled.a`
 	color: #f7f7f7;
 `;
 export const Button = styled.button`
-	width: 91px;
+	width: ${({ width }) => width || undefined};
 	height: 39px;
 	color: inherit;
-	background-color: #e02735;
+	background-color: ${({ background }) => background || undefined};
 	border: 0;
 	outline: 0;
 `;

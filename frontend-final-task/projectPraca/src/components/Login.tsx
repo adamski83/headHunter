@@ -57,7 +57,9 @@ export const Login = () => {
 					<Text>
 						Nie masz konta? <Link href='#'>Zarejestruj się</Link>
 					</Text>
-					<Button>Zaloguj się</Button>
+					<Button background='#e02735' width='91px'>
+						Zaloguj się
+					</Button>
 				</div>
 			</SignInForm>
 		</div>

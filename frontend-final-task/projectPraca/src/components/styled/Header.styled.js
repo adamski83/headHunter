@@ -5,14 +5,14 @@ export const Wrapper = styled.div`
 	max-height: 1340px;
 	margin: 0 auto;
 	display: flex;
-	background-color: #1e1e1f;
+	background-color: ${({ color }) => color || 'undefined'};
 	justify-content: space-around;
 `;
 
 export const StyledHeader = styled.header`
 	width: 1430px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 `;
 
 export const DropDownProfile = styled.div`

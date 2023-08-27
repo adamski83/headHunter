@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Login } from './components/Login';
-import CreateUserData from './components/CreateUserData';
 import './App.css';
 import { UsersList } from './components/UsersList';
 

@@ -6,7 +6,7 @@ import Logo from '../assets/LogoMegaK.png';
 
 export const Header = () => {
 	return (
-		<Wrapper>
+		<Wrapper color='#1E1E1F'>
 			<StyledHeader>
 				<Image src={Logo} />
 				<UserMenu />

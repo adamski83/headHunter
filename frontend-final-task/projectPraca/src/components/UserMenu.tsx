@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StyledMenu, DropDownProfile } from './styled/Header.styled.js';
+import { DropDownProfile } from './styled/Header.styled.js';
 import { userData } from './User.js';
 import { Image } from './styled/Login.styled.js';
 
